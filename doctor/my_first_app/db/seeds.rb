@@ -8,6 +8,12 @@ end
 10.times do
   appointments = Appointment.create!(doctor_id: Doctor.all.ids.sample, patient_id: Patient.all.ids.sample, date: Faker::Date.forward(21))
 end
+5.times do
+  city = City.create!(city: Faker::Lovecraft.location)
+end
+5.times do
+  specialty = Specialty.create!(specialty: Faker::Job.field)
+end
 
 
 # This file should contain all the record creation needed to seed the database with its default values.
